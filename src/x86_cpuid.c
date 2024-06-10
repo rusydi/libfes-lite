@@ -1,6 +1,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#if defined(__i386__) || defined(__x86_64__)
+
 #if defined(_MSC_VER)
 # include <intrin.h>
 #endif
@@ -105,3 +107,5 @@ bool feslite_sse2_available()
 
     return 0;
 }
+
+#endif
